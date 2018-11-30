@@ -1,0 +1,252 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+      /* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+     #jumbo {
+    margin-bottom: 0px;
+    background-image: url(https://www.samsoe.com/on/demandware.static/-/Sites/default/dwcdcac707/images/Category%20banners%20Samsoe/18.03/Man/m_clothing_shorts_1803.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+} 
+
+
+      #jumbo2 {
+          margin-left: -93px;
+          margin-right: -93px;
+              margin-bottom: 100px;
+          height: 400px;
+    background-image: url(https://oldnavy.gap.com/Asset_Archive/ONWeb/content/0013/951/230/assets/082417_US_W_Tall_VI.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+      }
+            #jumbo3 {
+          margin-left: -93px;
+          margin-right: -93px;
+              margin-bottom: 100px;
+          height: 400px;
+    background-image: url(http://www.design-guru.org/wp-content/uploads/2018/08/custom_image.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+      }
+            #jumbo4 {
+          margin-left: -93px;
+          margin-right: -93px;
+              margin-bottom: 100px;
+          height: 400px;
+    background-image: url(http://www.aychamo.com/includes/templates/instrumentcatalog/images/banner.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+      }
+
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+      background-color: #273544;
+      text-align: center;
+      margin-top: 50px;
+  }
+      #mycart {
+          margin-top: 100px;
+      }
+      #jumbo {
+          margin-bottom: 100px;
+          margin-left: -93px;
+          margin-right: -93px;
+          height: 400px;
+      }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: #111;
+  }
+    
+
+  .container {
+      padding: 0%;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+      .carousel-control{
+
+      }
+      #details {
+          margin-top: 200px;
+      }
+      .bg-2 {
+          background: #2d2d30;
+      color: #bdbdbd;
+          margin-left: -93px;
+          margin-right: -93px;
+      }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%);  
+      margin: auto;
+  }
+      #secondcaro {
+          margin-top: 50px;
+          
+      }
+      #newproducts {
+          margin-top: 50px;
+      }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 1000px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+      margin-left: -93px;
+      margin-right: -93px;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+a {
+    color: #0060B6;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
+}

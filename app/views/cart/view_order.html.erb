@@ -1,0 +1,68 @@
+
+
+<div id="mycart" >
+     <h1>My Cart</h1>
+</div>
+<div>
+    
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</div>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<%= render 'layouts/css' %>
+<div class="container">
+    <% @line_items.each do |line_item| %>
+  <table id="cart" class="table table-hover table-condensed">
+      
+    <thead>
+      <tr>
+        <th style="width:50%">Product</th>
+        <th style="width:10%">Price</th>
+        <th style="width:8%">Quantity</th>
+        <th style="width:22%" class="text-center">Subtotal</th>
+        <th style="width:10%"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-th="Product">
+          <div class="row">
+            <div class="col-sm-2 hidden-xs"></div>
+            <div class="col-sm-10">
+             
+  <%= image_tag line_item.product.image.url, class: "img-responsive", width: "50px", height: "50px" %>
+
+            </div>
+          </div>
+        </td>
+        <td data-th="Price" class="text-center"><%= number_to_currency line_item.product.price %></td>
+        <td data-th="Quantity">
+          <%= line_item.quantity %>
+        </td>
+        <td data-th="Subtotal" class="text-center"><%= number_to_currency line_item.line_item_total %></td>
+        <td class="actions" data-th="">
+            <p>
+          <button class="btn btn-info btn-sm"><i class="fa fa-level-up"><%= link_to "Add one", add_quantity_path(line_item), method: :post %></i></button>
+            </p>
+            <p>
+            <button class="btn btn-info btn-sm"><i class="fa fa-level-down"><%= link_to "Reduce one", reduce_quantity_path(line_item), method: :post %></i></button>
+            </p>
+            
+          <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"><%= link_to "Remove items", remove_path(line_item), method: :delete %></i></button>
+            
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="visible-xs">
+        <td class="text-center"><strong>Total <%= number_to_currency line_item.line_item_total * 0.07 %></strong></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="hidden-xs"></td>
+        <td class="hidden-xs text-center"><strong>Total <%= number_to_currency line_item.line_item_total * 0.07 + line_item.line_item_total %></strong></td>
+        <td><%= link_to "Proceed to Checkout?", checkout_path, class: "btn btn-success" %></td>
+      </tr>
+        <% end %>
+    </tfoot>
+  </table>
+</div>
+

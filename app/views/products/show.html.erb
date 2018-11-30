@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<div id="details" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span>
+        <% unless @product.image.blank? %>
+  <%= image_tag @product.image.url, class: "img-responsive" %>
+<% end %>
+        </span>
+    </div>
+    <div class="col-sm-8">
+      <h2><%= @product.name %></h2><br>
+
+<p>
+  <strong>Price:</strong>
+  <%= number_to_currency @product.price %>
+</p>
+<br/>
+<p>
+  <strong>Quantity:</strong>
+  <%= @product.quantity %>
+</p>
+<br/>
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+<br/>
+<p>
+  <strong>Brand:</strong>
+  <%= @product.brand %>
+</p>
+<br/>
+<p>
+  <strong>Category:</strong>
+  <%= @product.category.name %>
+</p>
+        <br/>
+        <% if @product.category.name != "Furniture" %>
+        <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sizes
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">S</a></li>
+    <li><a href="#">M</a></li>
+    <li><a href="#">L</a></li>
+    <li><a href="#">XL</a></li>
+  </ul>
+</div>
+        <% end %>
+        <br/>
+        		      	<%= form_tag add_to_cart_path do %>
+                    <%= hidden_field_tag :product_id, @product.id %>
+                    <%= number_field_tag :quantity, nil, placeholder: "How many?" %>
+                    <%= submit_tag "Add to Cart", class: "btn btn-primary" %>
+          <% end %>
+    </div>
+  </div>
+</div>
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
+

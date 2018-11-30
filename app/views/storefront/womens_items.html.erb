@@ -1,0 +1,22 @@
+
+
+<div id="jumbo2" class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Women's</h1>
+  </div>
+</div>
+
+
+
+<div class="row">
+	<% @womens.each do |product| %>
+		<div class="col-md-4">
+				<% if product.image.blank? == false %>
+					<p><%= image_tag product.image.url, height: "360px", width: "350px" %></p>
+				<% end %>
+				<h3><%= link_to product.name, product %></h3>
+				<p><%= number_to_currency product.price %></p>
+		</div>
+    <% end %>
+</div>
+

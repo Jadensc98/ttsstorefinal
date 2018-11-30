@@ -1,0 +1,20 @@
+
+<div id="jumbo3" class="jumbotron jumbotron-fluid">
+  <div class="container">
+
+  </div>
+</div>
+
+
+
+<div class="row">
+	<% @furniture.each do |product| %>
+		<div class="col-md-4">
+				<% if product.image.blank? == false %>
+					<p><%= image_tag product.image.url, height: "300px", width: "350px" %></p>
+				<% end %>
+				<h3><%= link_to product.name, product %></h3>
+				<p><%= number_to_currency product.price %></p>
+		</div>
+    <% end %>
+</div>

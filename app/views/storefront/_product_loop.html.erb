@@ -1,0 +1,15 @@
+<div class="container">
+<div class="row">
+	<% @products.each do |product| %>
+		<div id="aicol" class="col-md-4">
+
+				<% if product.image.blank? == false %>
+					<p><%= image_tag product.image.url, class: "s-category-grid o-row o-column o-extra-small--12 js-category-grid", height: "400px", width: "350px"%></p>
+				<% end %>
+				<h3><%= link_to product.name, product %></h3>
+				<p><%= number_to_currency product.price %></p>
+		</div>
+    <% end %>
+</div>
+</div>
+ 
